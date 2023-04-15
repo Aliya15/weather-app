@@ -1,1 +1,1 @@
-# shop-app
+# weather-app
