@@ -1,5 +1,5 @@
 import { Actions, createEffect, ofType } from "@ngrx/effects";
-import {catchError, debounceTime, map, of, switchMap} from "rxjs";
+import { catchError, debounceTime, map, of, switchMap } from "rxjs";
 import { Injectable } from "@angular/core";
 import {
   getWeatherDataAction,
@@ -20,7 +20,7 @@ export class WeatherEffects {
   getWeatherData$ = createEffect(() => {
     return this._actions$.pipe(
       ofType(getWeatherDataAction),
-        debounceTime(1000),
+      debounceTime(1000),
       switchMap((action) => {
         return this._weatherService.getWeatherData(action.city).pipe(
           map((weatherData) => {

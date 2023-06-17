@@ -1,6 +1,6 @@
-import { EnvironmentConfig } from '../typings/environment';
+import { EnvironmentConfig } from "../typings/environment";
 
 export const environment: EnvironmentConfig = {
-    production: true,
-    apiUrl: 'http://localhost:8080',
+  production: true,
+  apiUrl: "http://localhost:8080",
 };

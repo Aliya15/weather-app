@@ -1,0 +1,41 @@
+<mat-card class="weather-content">
+  <mat-card-header class="weather-content__city">
+    <p>Right now in</p>
+    <mat-form-field class="weather-content__city__input">
+      <input
+        #cityValue
+        (keyup)="
+          !cityValue.value.length
+            ? clearLocationsData()
+            : getWeatherData(cityValue.value)
+        "
+        matInput
+        placeholder="Ex. Amsterdam"
+        type="text"
+      />
+    </mat-form-field>
+  </mat-card-header>
+  <mat-card-content
+    *ngIf="weatherData$ | async as weatherData"
+    class="weather-content__information"
+  >
+    <div class="weather-content__information__temperature">
+      <img [src]="weatherData.weather[0].icon | getWeatherIcon" />
+      <div class="weather-content__information__temperature__data">
+        <h6>{{ weatherData.main.temp.toFixed() }}<span>°C</span></h6>
+        <p>
+          {{ weatherData.main.temp_min.toFixed() }} /
+          {{ weatherData.main.temp_max.toFixed() }}
+        </p>
+      </div>
+    </div>
+    <p>{{ weatherData.weather[0].description }}</p>
+    <div class="weather-content__information__additional">
+      <mdb-icon fas icon="umbrella"></mdb-icon>
+      <p>Wind: {{ weatherData.wind.speed }} meter(s)/sec</p>
+      <p>Visibility: {{ weatherData.visibility }} meter(s)</p>
+      <p>Humidity: {{ weatherData.main.humidity }}%</p>
+      <p>Pressure: {{ weatherData.main.pressure }}hPa</p>
+    </div>
+  </mat-card-content>
+</mat-card>

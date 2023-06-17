@@ -1,4 +1,4 @@
 export declare interface EnvironmentConfig {
-    production: boolean;
-    apiUrl: string;
+  production: boolean;
+  apiUrl: string;
 }
