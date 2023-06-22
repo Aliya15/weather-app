@@ -1,0 +1,22 @@
+<mat-card class="weather-content">
+  <mat-card-header class="weather-content__city">
+    <p>Right now in</p>
+    <mat-form-field class="weather-content__city__input">
+      <input
+        #cityValue
+        (keyup)="getWeatherData(cityValue.value)"
+        matInput
+        placeholder="Ex. Amsterdam"
+        type="text"
+      />
+    </mat-form-field>
+  </mat-card-header>
+
+  <app-weather-data-card
+    [weatherData]="weatherData$ | async"
+  ></app-weather-data-card>
+
+  <h2 *ngIf="selectWeatherDataError$ | async as selectWeatherDataError">
+    Sorry, {{ selectWeatherDataError.error.message }}
+  </h2>
+</mat-card>

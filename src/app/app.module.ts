@@ -10,17 +10,7 @@ import { ApiHttpInterceptor } from "@core/interceptor/api-http.interceptor";
 import { StoreModule } from "@ngrx/store";
 import { OptionalModules } from "@core/modules/optional-modules/optional-modules";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { FormsModule } from "@angular/forms";
-import { MatInputModule } from "@angular/material/input";
-import { MatButtonModule } from "@angular/material/button";
-import { MatIconModule } from "@angular/material/icon";
-import { MatCardModule } from "@angular/material/card";
-import { MatDividerModule } from "@angular/material/divider";
-import { MDBRootModule } from "angular-bootstrap-md";
-import { MainPageModule } from "@pages/main-page/main-page.module";
 import { EffectsModule } from "@ngrx/effects";
-import { WeatherEffects } from "@pages/main-page/store/effects/weather.effects";
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,7 +23,6 @@ import { WeatherEffects } from "@pages/main-page/store/effects/weather.effects";
     EffectsModule.forRoot({}),
     OptionalModules,
     BrowserAnimationsModule,
-    MainPageModule,
   ],
   providers: [
     {

@@ -4,12 +4,13 @@ import { RouterModule, Routes } from "@angular/router";
 const routes: Routes = [
   {
     path: "",
+    pathMatch: "full",
     loadChildren: () =>
-      import("./pages/main-page/main-page.module").then(
-        (m) => m.MainPageModule
+      import("./pages/weather-page/weather-page.module").then(
+        (m) => m.WeatherPageModule
       ),
   },
-  { path: "**", pathMatch: "full", redirectTo: "" },
+  { path: "**", redirectTo: "" },
 ];
 
 @NgModule({
