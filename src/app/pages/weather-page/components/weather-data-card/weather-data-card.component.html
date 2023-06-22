@@ -1,23 +1,20 @@
-<mat-card-content
-        *ngIf="weatherData"
-        class="weather-content__information"
->
-    <div class="weather-content__information__temperature">
-        <img [src]="weatherData.weather[0].icon | getWeatherIcon" />
-        <div class="weather-content__information__temperature__data">
-            <h6>{{ weatherData.main.temp | numberToFixed }}<span>°C</span></h6>
-            <p>
-                {{ weatherData.main.temp_min | numberToFixed }} /
-                {{ weatherData.main.temp_max | numberToFixed }}
-            </p>
-        </div>
+<mat-card-content *ngIf="weatherData" class="weather-information">
+  <div class="weather-information__temperature">
+    <img [src]="weatherData.weather[0].icon | getWeatherIcon" />
+    <div class="weather-information__temperature__data">
+      <h6>{{ weatherData.main.temp | numberToFixed }}<span>°C</span></h6>
+      <p>
+        {{ weatherData.main.temp_min | numberToFixed }} /
+        {{ weatherData.main.temp_max | numberToFixed }}
+      </p>
     </div>
-    <p>{{ weatherData.weather[0].description }}</p>
-    <div class="weather-content__information__additional">
-        <mdb-icon fas icon="umbrella"></mdb-icon>
-        <p>Wind: {{ weatherData.wind.speed }} meter(s)/sec</p>
-        <p>Visibility: {{ weatherData.visibility }} meter(s)</p>
-        <p>Humidity: {{ weatherData.main.humidity }}%</p>
-        <p>Pressure: {{ weatherData.main.pressure }}hPa</p>
-    </div>
+  </div>
+  <p>{{ weatherData.weather[0].description }}</p>
+  <div class="weather-information__additional">
+    <mdb-icon fas icon="umbrella"></mdb-icon>
+    <p>Wind: {{ weatherData.wind.speed }} meter(s)/sec</p>
+    <p>Visibility: {{ weatherData.visibility }} meter(s)</p>
+    <p>Humidity: {{ weatherData.main.humidity }}%</p>
+    <p>Pressure: {{ weatherData.main.pressure }}hPa</p>
+  </div>
 </mat-card-content>

@@ -7,7 +7,7 @@ import {
   getWeatherDataActionSuccess,
 } from "@pages/weather-page/store/weather.actions";
 import { Store } from "@ngrx/store";
-import {WeatherService} from "@pages/weather-page/services/weather.service";
+import { WeatherService } from "@pages/weather-page/services/weather.service";
 
 @Injectable()
 export class WeatherEffects {

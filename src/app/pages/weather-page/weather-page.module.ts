@@ -2,7 +2,10 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { WeatherPageComponent } from "@pages/weather-page/weather-page.component";
 import { StoreModule } from "@ngrx/store";
-import {WEATHER_KEY, weatherFeature} from "@pages/weather-page/store/weather.reducers";
+import {
+  WEATHER_KEY,
+  weatherFeature,
+} from "@pages/weather-page/store/weather.reducers";
 import { EffectsModule } from "@ngrx/effects";
 import { WeatherEffects } from "@pages/weather-page/store/weather.effects";
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -13,9 +16,9 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatCardModule } from "@angular/material/card";
 import { MatDividerModule } from "@angular/material/divider";
 import { MDBRootModule } from "angular-bootstrap-md";
-import {WeatherPageRoutingModule} from "@pages/weather-page/weather-page-routing.module";
-import { WeatherDataCardComponent } from './components/weather-data-card/weather-data-card.component';
-import {SharedPipesModule} from "@shared/pipe/shared-pipes.module";
+import { WeatherPageRoutingModule } from "@pages/weather-page/weather-page-routing.module";
+import { WeatherDataCardComponent } from "./components/weather-data-card/weather-data-card.component";
+import { SharedPipesModule } from "@shared/pipe/shared-pipes.module";
 
 @NgModule({
   declarations: [WeatherPageComponent, WeatherDataCardComponent],
@@ -32,7 +35,7 @@ import {SharedPipesModule} from "@shared/pipe/shared-pipes.module";
     MatDividerModule,
     MDBRootModule,
     WeatherPageRoutingModule,
-    SharedPipesModule
+    SharedPipesModule,
   ],
   exports: [WeatherPageComponent],
 })

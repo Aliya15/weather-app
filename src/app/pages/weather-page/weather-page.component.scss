@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+h2 {
+  font-weight: 400;
+}
+
 .weather-content {
   height: 70vh;
   width: 87vw;
@@ -36,59 +40,10 @@
       }
     }
   }
+}
 
-  &__information {
-    margin-top: 10px;
-    width: 100%;
-
-    h3 {
-      letter-spacing: 1.1px;
-      font-size: 25px;
-      text-align: center;
-    }
-
-    &__temperature {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &__data {
-        text-align: center;
-        margin-left: 10px;
-
-        h6 {
-          font-size: 45px;
-          margin: 48px 0 0 20px;
-
-          span {
-            font-size: 20px;
-            position: absolute;
-          }
-        }
-
-        img {
-          height: 100%;
-        }
-      }
-    }
-
-    p {
-      text-align: center;
-      text-transform: capitalize;
-    }
-
-    &__additional {
-      margin: 70px 20px 0 0;
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-
-      p {
-        margin: 5px 0;
-        text-transform: none;
-      }
-    }
-  }
+app-weather-data-card {
+  width: 96%;
 }
 
 mat-form-field {

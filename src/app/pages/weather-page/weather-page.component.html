@@ -12,5 +12,11 @@
     </mat-form-field>
   </mat-card-header>
 
-  <app-weather-data-card [weatherData]="weatherData$ | async"></app-weather-data-card>
+  <app-weather-data-card
+    [weatherData]="weatherData$ | async"
+  ></app-weather-data-card>
+
+  <h2 *ngIf="selectWeatherDataError$ | async as selectWeatherDataError">
+    Sorry, {{ selectWeatherDataError.error.message }}
+  </h2>
 </mat-card>
