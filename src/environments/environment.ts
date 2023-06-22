@@ -1,5 +1,5 @@
 import { EnvironmentConfig } from "../typings/environment";
-import {apiKey} from "../../apiKey";
+import { apiKey } from "../../apiKey";
 
 export const environment: EnvironmentConfig = {
   production: true,
