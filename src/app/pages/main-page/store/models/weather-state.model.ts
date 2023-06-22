@@ -1,7 +1,7 @@
 import { IWeatherData } from "@core/services/weather/weather.type";
 import { HttpErrorResponse } from "@angular/common/http";
 
-export interface AppState {
+export interface WeatherState {
   weatherData: IWeatherData | null;
   isLoading: boolean;
   error: HttpErrorResponse | null;

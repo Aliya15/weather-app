@@ -4,11 +4,7 @@
     <mat-form-field class="weather-content__city__input">
       <input
         #cityValue
-        (keyup)="
-          !cityValue.value.length
-            ? clearLocationsData()
-            : getWeatherData(cityValue.value)
-        "
+        (keyup)="getWeatherData(cityValue.value)"
         matInput
         placeholder="Ex. Amsterdam"
         type="text"
@@ -22,10 +18,10 @@
     <div class="weather-content__information__temperature">
       <img [src]="weatherData.weather[0].icon | getWeatherIcon" />
       <div class="weather-content__information__temperature__data">
-        <h6>{{ weatherData.main.temp.toFixed() }}<span>°C</span></h6>
+        <h6>{{ weatherData.main.temp | numberToFixed }}<span>°C</span></h6>
         <p>
-          {{ weatherData.main.temp_min.toFixed() }} /
-          {{ weatherData.main.temp_max.toFixed() }}
+          {{ weatherData.main.temp_min | numberToFixed }} /
+          {{ weatherData.main.temp_max | numberToFixed }}
         </p>
       </div>
     </div>

@@ -1,8 +1,11 @@
-import { ReducerSections, ReducerStatuses } from "@store/models/reducer";
+import {
+  ReducerSections,
+  ReducerStatuses,
+} from "@pages/main-page/store/models/reducer";
 import { createAction, props } from "@ngrx/store";
-import { WeatherActions } from "@store/models/app-state.model";
 import { HttpErrorResponse } from "@angular/common/http";
 import { IWeatherData } from "@core/services/weather/weather.type";
+import { WeatherActions } from "@pages/main-page/store/models/weather-state.model";
 
 export const getWeatherDataAction = createAction(
   `${ReducerSections.WEATHER} ${WeatherActions.getWeatherData} ${ReducerStatuses.INIT}`,

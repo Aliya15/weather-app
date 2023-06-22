@@ -5,7 +5,7 @@ import {
   getWeatherDataAction,
   getWeatherDataActionFailed,
   getWeatherDataActionSuccess,
-} from "@store/actions/weather.actions";
+} from "@pages/main-page/store/actions/weather.actions";
 import { WeatherService } from "@core/services/weather/weather.service";
 import { Store } from "@ngrx/store";
 
