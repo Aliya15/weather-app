@@ -1,6 +1,8 @@
-import { EnvironmentConfig } from '../typings/environment';
+import { EnvironmentConfig } from "../typings/environment";
+import { apiKey } from "../../apiKey";
 
 export const environment: EnvironmentConfig = {
-    production: true,
-    apiUrl: 'http://localhost:8080',
+  production: true,
+  apiUrl: "https://api.openweathermap.org/data/",
+  apiKey: apiKey,
 };

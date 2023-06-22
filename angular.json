@@ -77,7 +77,7 @@
                             "browserTarget": "weatherapp:build:production"
                         },
                         "development": {
-                            "browserTarget": "weatherapp:build:development"
+                            "browserTarget": "weatherapp:build:development",
                         }
                     },
                     "defaultConfiguration": "development"
